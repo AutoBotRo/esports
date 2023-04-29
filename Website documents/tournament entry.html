@@ -1,39 +1,90 @@
-<!DOCTYPE html>
-<header>
-</header>
+    <!DOCTYPE html>
+    <header> 
+        <title>RolyIns eSports Application</title>
+        <link rel="stylesheet" href="./entry.css">
+    </header>
 
-<body>
-
-    <main>
-        <h1>Application for Tournament</h1>
-        <p> Here you can apply for this month's tournament</p>
-        <hr/>
-        <h2> Player info</h2>
-        <p> We need to know how to be able to work with you</p>
+    <body>
         
-        <p> Discord ID</p>    
-        <input type='text' id='discord' placeholder='How we communicate' required>
-        
-        <p>PSN Account(optional)</p>
-        <input type="text" id="psn Username" placeholder="Username for one of the platforms we support">
 
-        <p>Steam Account(optional)</p>
-        <input type="text" id="steam acocunt" placeholder="Username for one of the platforms we support">
+        <main>
+            <h1 id="title">Application for Tournament</h1>
+            <p id="description"> Here you can apply for this month's tournament</p>
+            <hr/>
+            
+            
+            <form id="application">
 
-        <input type="text" id="matcherino account" placeholder="Username for the platform that we process payemnts with" required>
+                
+                <fieldset>
+                    <p> We need to know how to be able to work with you</p>
 
-        <p>Are you over 13 years old?</p>
-        <label><input type="radio" id="age verfication">yes</label>
-        <label><input type="radio" id="age verfication">no</label>
+                    <label for="name" id="name-label">Preferred Name: <input type="text" id='name' placeholder="What should we call you?" class="contact-info" required>
+                        </label>
+            
+                    <label for="discord" id="discord-label">Discord ID <input type='text' id='discord' placeholder='How we communicate' class="contact-info" required>
+                        </label>
+            
+                    <label for="psn" id="psn-label">PSN Account(optional) <input type="text" id="psn" placeholder="Username for one of the platforms we support" class="contact-info">
+                        </label>
 
-        <p>What games do you want to play?</p>
-        
-        <label><input type="checkbox">Guilty Gear Strive</label>
-        <label><input type="checkbox">Street Fighter 6</label>
-        <label><input type="checkbox">Skull Girls</label>
+                    <label for="steam" id="steam-label">Steam Account(optional) <input type="text" id="steam" placeholder="Username for one of the platforms we support" class="contact-info">
+                        </label>
+                    <label for="matcherino" id="matcherino-label">Matcherino Account <input type="text" id="matcherino" placeholder="Username for the platform that we process payemnts with" class="contact-info" required>
+                        </label>
+                    
+                    <label for="email" id="email-label">Email: <input type="email" id="email" placeholder="Incase we can't reach you by Discord" class="contact-info" required>
+                        </label>
+                </fieldset>
 
-    </main>
-</body>
+                <fieldset id="radio-section-fieldset">
+                    <section id="radio-section-age" class="radio-section">
+                        <p>Are you over 13 years old?</p>
+                        <label for="yes-of-age"><input type="radio" id="yes-of-age" value="yes-of-age" name="yes-of-age">yes</label>
+                        <label for="not-of-age"><input type="radio" id="not-of-age" value="not-of-age" name="not-of-age">no</label>
+                    </section>
+                    
+                    <section id="radio-section-citizenship" class="radio-section">
+                        <p>Are you a U.S Citizen?</p>
+                        <label for="is-a-citizen"><input type="radio" id="is-a-citizen" value="is-a-citizen" name="is-a-citizen">yes</label>
+                        <label for="not-a-citizen"><input type="radio" id="not-a-citizen" value="not-a-citizen" name="not-a-citizen">no</label>
+                    </section>
 
-<footer>
-</footer>
+                    
+                </fieldset>
+                
+                <fieldset id="marketing-fieldset">
+                    <label for="dropdown" id="referral-dropdown">How did you hear about us?
+                        <select id="dropdown" class="dropdown">
+                            <option value="">(select option)</option>
+                            <option value="twitch">Twitch</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="friend">Friend</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+
+                        <section id="marketing" class="radio-section">
+                            <p>Would you like to receive updates on new events?</p>
+                            <label for="opt-in"><input type="radio" id="opt-in" value="opt-in" name="opt-in">yes</label>
+                            <label for="opt-out"><input type="radio" id="opt-out" value="opt-out" name="opt-out">no</label>
+                        </section>
+                </fieldset>
+
+                <fieldset>
+                    <p>What games do you want to sign up for?</p>
+            
+                    <label><input type="checkbox" value="ggst" name="ggst">Guilty Gear Strive</label>
+                    <label><input type="checkbox" value="sf6" name="sf6">Street Fighter 6</label>
+                    <label><input type="checkbox" value="sg" name="sg">Skull Girls</label>
+
+                    
+                </fieldset>
+                <input type="submit" id="submit">
+            </form>
+        </main>
+    </body>
+
+    <footer>
+    </footer>
